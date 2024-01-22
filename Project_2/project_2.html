@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML CALCULATOR</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="bootstrap.css.map" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .calc-btn {
+            height: 60px;
+            width: 60px;
+        }
+
+        .calc-disp {
+            background-color: black;
+            color: white;
+            height: 100px;
+            width: 325px;
+            border-radius: 3px;
+        }
+
+        .ExpressionString {
+            margin-top: 5px;
+            height: 20px;
+            display: block;
+            font-size: 20px;
+        }
+
+        .valuestring {
+            margin-top: 5px;
+            height: 20px;
+            display: block;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Calculator-->
+    <div class="container p-5">
+        <div class="d-flex justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="background-color: rgb(237, 232, 232); padding-bottom: 5%; padding-top: 5%;">
+                    <!--Calculator Output Screen-->
+                    <div class="d-flex justify-content-center p-2 align-items-center">
+                        <div class="row">
+                            <!--calculator columns for buttons-->
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 calc-disp">
+                                <div id="Expression" class="ExpressionString"></div>
+                                <div id="value_div" class="valuestring"></div>
+                            </div>
+                            <input type="hidden" id="savedexp">
+                        </div>
+                    </div>
+
+                    <!--calculator rows for buttons styling in rows-->
+                    <div class="d-flex justify-content-center p-2 align-items-center">
+                        <div class="row">
+                            <!--calculator columns for buttons-->
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-secondary calc-btn" title="Braces Start"
+                                    data-event_key="(">(</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-secondary calc-btn" title="Braces End"
+                                    data-event_key=")">)</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-danger calc-btn" title="Clear Screen"
+                                    data-event_key="Delete">CE</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-warning calc-btn" title="Divide" data-event_key="/">/</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center p-2 align-items-center">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="7">7</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="8">8</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="9">9</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-warning calc-btn" title="Multiply"
+                                    data-event_key="*">x</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center p-2 align-items-center">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="4">4</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="5">5</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="6">6</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-warning calc-btn" title="Subtract"
+                                    data-event_key="-">-</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center p-2 align-items-center">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="1">1</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="2">2</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="3">3</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-warning calc-btn" title="Add" data-event_key="+">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center p-2 align-items-center">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-secondary calc-btn" data-event_key=".">.</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-info calc-btn" data-event_key="0">0</button>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" class="btn btn-primary calc-btn" style="width: 150px;" data-event_key="=">=</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="bootstrap.js"></script>
+    <script>
+        var currexp = "";
+        $(document).on('keydown', function (e) {
+            var key = e.key;
+            if (key == undefined) {
+                key = String.fromCharCode(e.which);
+            }
+
+            if (e.key == '.') {
+                //decimal point handled separately
+                handleDecimalPoint();
+                e.preventDefault();
+            } else {
+                if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) {
+                    addnum(e.key);
+                } else {
+                    if (e.key == '+' || e.key == '-' || e.key == '*' || e.key == '/' || e.key == '(' || e.key == ')') {
+                        operatorhandler(e.key);
+                        generateexp(e.key);
+                    } else if (e.key == "=") {
+                        try {
+                            evalexp();
+                        } catch (error) {
+                            displayError(error.message);
+                        }
+                    } else if (e.key == "Delete") {
+                        clearcalc();
+                    }
+                }
+                console.log("Key pressed:", e.key);
+            }
+            e.preventDefault();
+        });
+
+
+        $(document).on('keyup', function (e) {
+            $('button[data-event_key="' + e.key + '"]').removeClass('active')
+            console.log(e);
+        })
+
+        $('.calc-btn').on('click', function (e) {
+            var key = $(this).data('event_key');
+
+            if (key != "+" && key != "-" && key != "*" && key != "/" && key != "." && key != "Delete" && key != "=" && key != "(" && key != ")" && key != "Clear") {
+                addnum(key);
+            }
+            else {
+                if (key == '+' || key == '-' || key == '*' || key == '/' || key == '(' || key == ')') {
+                    generateexp(key);
+                }
+                else if (key == "=") {
+                    evalexp();
+                }
+                else if (key == "Delete") {
+                    clearcalc();
+                }
+            }
+            console.log(key);
+        })
+
+        $('.calc-btn[data-event_key="."]').on('click', function (e) {
+            e.preventDefault();
+            handleDecimalPoint();
+        });
+
+        function handleDecimalPoint() {
+            var currexp = $("#Expression").text();
+            var lastChar = currexp.slice(-1);
+
+            if (!isOperator(lastChar) || lastChar === '0') {
+                addnum('.');
+            }
+        }
+
+        function addnum(num) {
+            var existingnum = $("#Expression").text();
+            var currstring = num;
+            var outputstring = '';
+
+            // Check if the current string is a decimal point
+            if (currstring === '.') {
+                var lastChar = existingnum.slice(-1);
+                if (isOperator(lastChar) || existingnum === '') {
+                    outputstring = '0' + currstring;
+                } else if (lastChar === '.') {
+                    // Do nothing if the last character is already a decimal point
+                    outputstring = existingnum;
+                } else {
+                    outputstring = existingnum + currstring;
+                }
+            } else {
+                outputstring = existingnum + currstring;
+            }
+
+            $("#Expression").text(outputstring);
+        }
+
+        // Helper function to check if a character is an operator
+        function isOperator(char) {
+            return ['+', '-', '*', '/'].includes(char);
+        }
+
+        function generateexp(operator) {
+            var existingExpression = $("#Expression").text();
+            var curroperator = operator;
+            var newExpression = existingExpression + curroperator;
+            $("#Expression").text(newExpression);
+        }
+
+        function evalexp() {
+            var result = "";
+            var Expression = $("#savedexp").val();
+            var existingnum = $("#Expression").text();
+
+            if (existingnum != '' || existingnum != null || existingnum != undefined) {
+                Expression = Expression + existingnum;
+            }
+            try {
+                if (Expression.includes('/0')) {
+                    throw "Division by zero is not allowed.";
+                }
+                result = eval(Expression);
+                if (isNaN(result)) {
+                    throw "Invalid expression";
+                }
+                $("#savedexp").val("");
+
+                $("#Expression").text("");
+                $("#value_div").html(result);
+            } catch (error) {
+                displayError("Error: " + error);
+            }
+        }
+
+        function clearcalc() {
+            $("#Expression").text("");
+            $("#savedexp").val("");
+            $("#value_div").html("");
+        }
+
+        function operatorhandler(operator) {
+            if (currexp.length > 0) {
+                var lastchar = currexp.slice(-1);
+                if (lastchar == '+' || lastchar == '-' || lastchar == '*' || lastchar == '/') {
+                    //remove last repeating operator
+                    currexp = currexp.slice(0, -1);
+                }
+            }
+            if ((operator == '+' || operator == '-' || operator == '*' || operator == '/') && (currexp.endsWith('(') || currexp.endsWith(')'))) {
+                return;
+            }
+            currexp += operator;
+            updateExpressionDisplay(currexp);
+        }
+
+        function updateExpressionDisplay(Expression) {
+            $("#Expression").text(Expression);
+        }
+
+        function displayError(errorMessage) {
+            $("#Expression").text(errorMessage);
+            setTimeout(clearError, 2000); // Clear error message after 2 seconds
+        }
+
+        function clearError() {
+            $("#Expression").text("");
+        }
+
+    </script>
+</body></html>

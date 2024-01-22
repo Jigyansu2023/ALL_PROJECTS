@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Single Page Website</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .color-teal {
+            color: teal;
+        }
+        .font-lg {
+            font-size: 50px;
+        }
+        .font-sm {
+            font-size: 20px;
+        }
+        .remove-text-decoration {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="m-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="logo.jpeg" height="100px" alt="logo">
+                </a>
+                <h1 class="display-3" style="color: rgb(9, 9, 249); font-weight:600;">GITA </h1>
+                <div>
+                    <h3 class="display-6 text-primary" style="font-style: italic; font-weight: 300; color: darkgreen;"> BHUBANESWAR</h3>
+                </div>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar1">
+                    <div class="navbar-nav ms-auto">
+                        <a href="#" class="nav-link nav-item active">HOME</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ACADEMICS</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Courses</a>
+                                <a href="#" class="dropdown-item">Beyond Academics</a>
+                                <a href="#" class="dropdown-item">Academic Regulations</a>
+                                <a href="#" class="dropdown-item">Library</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> EXAMINATIONS</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Principal</a>
+                                <a href="#" class="dropdown-item">Faculty</a>
+                                <a href="#" class="dropdown-item">Parent</a>
+                                <a href="#" class="dropdown-item">Student</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> FACILITIES</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Facilities Provided</a>
+                                <a href="#" class="dropdown-item">Hostel Accomodations</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> DEPARTMENTS</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">MECHANICAL ENGG.</a>
+                                <a href="#" class="dropdown-item">COMPUTER SCIENCE ENGG.</a>
+                                <a href="#" class="dropdown-item">ELECTRICAL ENGG.</a>
+                                <a href="#" class="dropdown-item">CIVIL ENGG.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+        <div class="container">
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="gita_1.jpg" class="d-block w-100" style="height:fit-content; width:fit-content ;"
+                            alt="Carousel 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="gita_2.jpg" class="d-block w-100" style="height:fit-content; width:fit-content ;"
+                            alt="Carousel 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="gita_3.jpg" alt="Carousel 3" class="d-block w-100"
+                            style="height:fit-content; width:fit-content ;" alt="Carousel 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" data-bs-target="#carousel" type="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" data-bs-target="#carousel" type="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="m-3">
+        <section class="container" id="aboutus">
+            <h5 class="display-5 text-center">About Us</h5>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="container">
+                        <img src="gita_4.jpg" class="d-block w-100" alt="aboutus">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <p class="text-black-50">
+                        GITA (Gandhi Institute for Technological Advancement) is a well-known name in the field of
+                        technical education.
+                        Founded in 2004 & situated in the outskirts of Bhubaneswar, in eastern India. It is approved by
+                        All India Council for
+                        Technical Education (AICTE) under Ministry of HRD, Govt. of India, and is affiliated to BPUT,
+                        Rourkela.It is accredited by
+                        NAAC (National Assessment and Accreditation Council) at "A" grade with 3.30 CGPA( Highest in
+                        Odisha),
+                        National Board of Accreditation (NBA) and approved by DSIR as SIRO (Scientific and Industrial
+                        Research Organization).
+                    </p>
+                    <p class="text-black-50">
+                        GITA is proud of providing qualitative technical education and strives to imbibe the spirit of
+                        research in students.
+                        It's ranked among top engineering colleges of the country over the years. Our students validate
+                        our claims not only in
+                        academics but also in the corporate world. They hone their knowledge & skills over the years &
+                        prove their calibre in
+                        professional field.We remain true to the motto of the college i.e. 'Excellence Unbridled' far
+                        beyond graduation.
+                    </p>
+                </div>
+            </div><br><br>
+            <div class="row">
+                <div>
+                    <h6 class="display-6 text-center">MORE ABOUT GITA</h6><br><br>
+                </div>
+                <div class="col-md-4">
+                    <div class="container text-center">
+                        <span class="bi bi-award-fill color-teal">Awards</span>
+                        <ul>
+                            <li>5th top engineering college among colleges in Odisha by times engineering
+                                survey,2016-2017</li>
+                            <li>Awarded “Best Engineering Institute in Academics in Odisha“ by Mark line and Ever Green
+                                Forum for session 2014-2015 .</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="container text-center">
+                        <span class="bi bi-bank color-teal"> Vision and Mission</span>
+                        <ul>
+                            <li>To foster prosperity through technological development by means of education, innovation
+                                and collaborative research
+                                and emerge as a premier technical institution in India.</li>
+                            <li>To impart quality professional education to students from around the country, so as to
+                                nurture innovations,
+                                technological advances, discipline and moral ethics.</li>
+                            <li>To draw the best expertise in science, technology and management to impart overall
+                                training to students in
+                                visualizing, synthesizing and executing projects.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="container text-center">
+                        <span class="bi bi-text-center color-teal"> Hostel Facilities</span>
+                        <p>A Home away from Home - at GITA we provide the students with facilities that are simple yet
+                            comfortable. The separate
+                            facilities for boys and girls, caring wardens and a tight security ensures a pleasant stay
+                            allowing you to focus on
+                            your academics. The campus has strict security through smart cards, biometric readers,
+                            latest IP cameras, fire warning
+                            systems, 24-hour guards etc. There is also an on-campus Bank and ATM facility.</p>
+                    </div>
+                </div>
+
+            </div><br><br>
+        </section>
+        <section id="team" class="container">
+            <h6 class="display-5 text-center">The Core Team</h6>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 300px;">
+                            <img src="6.jpg" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Prof. (Dr.) Manmatha K. Roul</h4>
+                                <p>The Principal</p>
+                                <i class="bi bi-envelope-fill"> <a href="#" target="_blank"
+                                        style="text-decoration: none;">principal@gita.edu.in"</a></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 300px;">
+                            <img src="1.jpg" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Cdr. (Dr.) P. K. Rautray</h4>
+                                <p>Dean Administration</p>
+                                <i class="bi bi-envelope-fill"> <a href="#" target="_blank"
+                                        style="text-decoration: none;">pkrautray@gita.edu.in</a></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 300px;">
+                            <img src="2.jpg" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Prof. Kishore Kumar Mishra</h4>
+                                <p>Dean Academics</p>
+                                <i class="bi bi-envelope-fill"> <a href="#" target="_blank"
+                                        style="text-decoration: none;">deanacademics@gita.edu.in</a></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 300px;">
+                            <img src="3.jpg" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Dr.Saroj Kumar Dash</h4>
+                                <p>HOD EE</p>
+                                <i class="bi bi-envelope-fill"> <a href="#" target="_blank"
+                                        style="text-decoration: none;">hodee@gita.edu.in</a></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 300px;">
+                            <img src="4.jpg" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Prof.(Dr.) Tarini Prasad Panigrahi</h4>
+                                <p>HOD CSE</p>
+                                <i class="bi bi-envelope-fill"> <a href="#" target="_blank"
+                                        style="text-decoration: none;">hodcse@gita.edu.in</a></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 300px;">
+                            <img src="5.jpg" alt="" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Prof.(Dr.)Joygopal Jena</h4>
+                                <p>HOD CIVIL</p>
+                                <i class="bi bi-envelope-fill"> <a href="#" target="_blank"
+                                        style="text-decoration: none;">hodcivil@gita.edu.in</a></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><br><br>
+
+        <section id="Contact" class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container">
+                        <p class="text-muted text-center fs-3">OTHER PLATFORMS</p>
+                        <div class="text-black-6 text-center fs-3">
+                            <div class="container">
+                                <button class="btn btn-outline-primary" type="button"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="GITA on Facebook">
+                                    <i class="bi  bi-facebook"></i>
+                                </button>
+                                <button class="btn btn-outline-secondary" type="button"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Join GITA's official discord server">
+                                    <i class="bi  bi-discord"></i>
+                                </button>
+                                <button class="btn btn-outline-success" type="button"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="GITA on LinkedIn">
+                                    <i class="bi  bi-linkedin"></i>
+                                </button>
+                                <button class="btn btn-outline-info" type="button"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="GITA on Twitter">
+                                    <i class="bi  bi-twitter"></i>
+                                </button>
+                                <button class="btn btn-outline-danger" type="button"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="GITA on Instagram">
+                                    <i class="bi  bi-instagram"></i>
+                                </button>
+                            </div><br>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 justify-content-center">
+                                    <img src="7.jpg" width="d-block w-100" alt="companies">
+                                </div>
+                            </div>
+                        </div><br>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container">
+                        <h4 class="text-muted text-center fs-3 display-3" style="font-weight: 600;">MESSAGES FROM...</h4>
+                        <div class="container">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="accordion accordion-flush" id="simpleacc2">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="simacc2headerone">
+                                                    <button type="button" class="accordion-button collapsed"
+                                                        data-bs-toggle="collapse" data-bs-target="#simpleacc2col1">
+                                                        Dr.Satya Prakash Panda (Chairman ,GITA)
+                                                    </button>
+                                                </h2>
+                                                <div class="accordion-collapse collapse" id="simpleacc2col1"
+                                                    data-bs-parent="#simpleacc2">
+                                                    <div class="card-body">
+                                                        <p>
+                                                            The difference between the dreamer and innovator is that a dreamer just dreams and
+                                                            an innovator creates his own path to realize ideas which others think as impossible.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="simacc2header2">
+                                                    <button type="button" class="accordion-button collapsed"
+                                                        data-bs-toggle="collapse" data-bs-target="#simpleacc2col2">
+                                                        Dr.Chandradhwaj Panda (Secretary, GITA)
+                                                    </button>
+                                                </h2>
+                                                <div class="accordion-collapse collapse" id="simpleacc2col2"
+                                                    data-bs-parent="#simpleacc2">
+                                                    <div class="card-body">
+                                                        <p>
+                                                            We live in a world that is driven intensely by knowledge where literally and figuratively,
+                                                            Knowledge is Power. Exercising this power with diligence and dynamism is a formidable task
+                                                            and requires a mindset that is a combination of wisdom and professionalism.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="simacc2header3">
+                                                    <button type="button" class="accordion-button collapsed"
+                                                        data-bs-toggle="collapse" data-bs-target="#simpleacc2col3">
+                                                        Mr. Biranchi Narayan Panda (Vice-Chairman, GITA)
+                                                    </button>
+                                                </h2>
+                                                <div class="accordion-collapse collapse" id="simpleacc2col3"
+                                                    data-bs-parent="#simpleacc2">
+                                                    <div class="card-body">
+                                                        <p>
+                                                            Quality education and research have been the focal point of our vision for imparting
+                                                            technical education in Eastern India, and we go a long way in making our vision a reality.
+                                                            I believe that we provide an impetus for continuous growth which would boost our teaching
+                                                            standards.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        </section>
+
+        <footer class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"><br>
+                        <div class="container">
+                            <i class="bi  bi-geo-alt" style="color: antiquewhite;"> GITA Autonomous College <br>
+                                Badaraghunathpur,Madanpur,Bhubaneswar</i>
+                        </div><br>
+                        <div class="container">
+                            <i class="bi  bi-telephone-fill" style="color: antiquewhite;"> Phone: <br> 9789780809</i>
+                        </div><br>
+                        <div class="container">
+                            <i class="bi  bi-envelope-at-fill" style="color: antiquewhite;"> Email: <br>
+                                gita@gita.edu.in</i>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container"><br>
+                            <p class="text-white fs-5">Quick links</p>
+                            <ul class="remove-bullets remove-text-decoration">
+                                <li><a href="#" class="remove-text-decoration">About</a></li>
+                                <li><a href="#" class="remove-text-decoration">Contact</a></li>
+                                <li><a href="#" class="remove-text-decoration">Disclaimer policy</a></li>
+                                <li><a href="#" class="remove-text-decoration">Terms and Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="navbar-nav ms-auto col-5">
+                            <h4 class="letter-spacing-1" style="color: antiquewhite;">KEEP IN TOUCH</h4>
+                            <form class="d-flex">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Send Your Suggestions...">
+                                    <button type="button" class="btn btn-success"><i class="bi bi-send"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="text-white text-center">
+                        <p>© 2016 by Gandhi Institute for Technological Advancement (GITA). All Rights Reserved..</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="bootstrap.js"></script>
+</body>
+</html>
